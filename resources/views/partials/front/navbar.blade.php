@@ -1,30 +1,21 @@
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-  <a href="{{ route('site.home') }}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>{{ config('app.name') }}</h2>
-  </a>
-  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto p-4 p-lg-0">
-      <a href="{{ route('site.home') }}" class="nav-item nav-link active">{{ __('Home') }}</a>
-      <a href="{{ route('site.about') }}" class="nav-item nav-link">{{ __('About') }}</a>
-      <a href="{{ route('site.courses') }}" class="nav-item nav-link">{{ __('Courses') }}</a>
-      {{-- <div class="nav-item dropdown">
-        <a href="{{ route('site.courses') }}" class="nav-item nav-link">{{ __('Courses') }}</a>
-        <div class="dropdown-menu fade-down m-0">
-          @php
-            $categories = App\Models\Category::where('status', 1)->get();
-          @endphp
-          @foreach ($categories as $category)
-            <a href="{{ route('site.category', ['slug' => $category->slug]) }}" class="dropdown-item">{{ $category->title }}</a>
-          @endforeach
-        </div>
-      </div> --}}
-      <a href="{{ route('site.contact') }}" class="nav-item nav-link">{{ __('Contact') }}</a>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto"><a href="{{ route('site.home') }}">{{ config('app.name') }}</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="{{ route('site.home') }}">{{ __('Inicio') }}</a></li>
+          <li><a href="{{ route('site.about') }}">{{ __('Sobre nosotros') }}</a></li>
+          <li><a href="{{ route('site.courses') }}">{{ __('Cursos') }}</a></li>
+          <li><a href="{{ route('site.contact') }}">{{ __('Contactanos') }}</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="javascript:void(0)" class="get-started-btn">{{ __('Registrate') }}</a>
+
     </div>
-    <a href="javascript:void(0)" class="btn btn-success py-4 px-lg-4 d-none d-lg-block">{{ __('Enroll Now') }}<i class="fas fa-arrow-right ms-3"></i></a>
-  </div>
-</nav>
-<!-- Navbar End -->
+  </header><!-- End Header -->

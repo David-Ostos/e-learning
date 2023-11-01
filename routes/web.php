@@ -24,11 +24,14 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
+ Route::get('/', function () {
+     return view('welcome');
+ });
+
+
+*/
 
 Route::get('/', [SiteController::class, 'home'])->name('site.home');
 Route::get('/about', [SiteController::class, 'about'])->name('site.about');
@@ -37,6 +40,8 @@ Route::prefix('courses')->group(function() {
   Route::get('/{slug}', [SiteController::class, 'display'])->name('course.display');
   // Route::get('/{slug}/purchase', [SiteController::class, 'enrollment'])->name('enrollment');
 });
+
+
 Route::get('/checkout', [SiteController::class, 'enrollment'])->name('enrollment');
 Route::get('/team', [SiteController::class, 'team'])->name('site.team');
 Route::get('/team/{uname}', [SiteController::class, 'instructor'])->name('team.instructor');
@@ -49,6 +54,7 @@ Route::get('/sitemap', [SiteController::class, 'sitemap'])->name('site.sitemap')
 Route::post('/session', [SiteController::class, 'processPayment'])->name('session');
 Route::get('/success', [SiteController::class, 'success'])->name('success');
 
+/*
 Route::middleware('super_admin')->prefix('super')->group(function () {
 // Route::prefix('admin')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('super.dashboard');
@@ -133,6 +139,7 @@ Route::middleware('instructor')->prefix('instructor')->group(function () {
   });
 });
 
+
 Route::middleware('student')->prefix('student')->group(function () {
 // Route::prefix('admin')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('student.dashboard');
@@ -147,5 +154,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+*/
 require __DIR__.'/auth.php';
+

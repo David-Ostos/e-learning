@@ -7,6 +7,7 @@
       <a href="{{ route('site.home') }}" class="nav-link">
         <i class="fas fa-house align-middle pe-1"></i>
         <span class="align-middle">{{ __('Home') }}</span>
+        <h1>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx11111111111x</h1>
       </a>
     </li>
     <li class="nav-item dropdown">
