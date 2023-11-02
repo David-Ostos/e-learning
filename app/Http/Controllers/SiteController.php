@@ -15,28 +15,48 @@ use Stripe\Stripe;
 use Stripe\Token;
 use Illuminate\Support\Facades\Log;
 
-class SiteController extends Controller {
+class SiteController extends Controller
+{
     //
-    public function home() {
+    public function home()
+    {
         return view('front-end.home');
     }
-    // 
-    public function about() {
-        return view('front-end.about');
+    //  
+    public function login()
+    {
+        return view('auth.login2');
+    }
+    //  
+    public function register()
+    {
+        return view('auth.register2');
     }
     // 
-    public function category($slug) {
+    public function about()
+    {
+        return view('front-end.about');
+    }
+    public function courses_details()
+    {
+        return view('front-end.courses-details');
+    }
+    // 
+    public function category($slug)
+    {
         $category = Category::where('slug', $slug)->firstOrFail();
         return view('front-end.courses', compact('category'));
     }
     // 
-    public function courses() {
+    public function courses()
+    {
         $categories = Category::all();
         $courses = Course::all();
         return view('front-end.courses', compact('categories', 'courses'));
     }
     //
-    public function display($slug) {
+    public function display($slug)
+    {
         $course = Course::with('topic')->where('slug', $slug)->firstOrFail();
         // $lessons = Lesson::where()
         return view('front-end.display', compact('course'));
@@ -45,13 +65,15 @@ class SiteController extends Controller {
     //     return view('front-end.courses', compact('course'));
     // }
     // 
-    public function enrollment(Request $request) {
+    public function enrollment(Request $request)
+    {
         $courseId = $request->query('course_id');
         $course = Course::find($courseId);
         return view('front-end.enrollment', compact('course'));
     }
     // 
-    public function checkout(Request $request) {
+    public function checkout(Request $request)
+    {
         dd($request);
         Stripe::setApiKey(config('services.stripe.secret'));
         $paymentIntent = PaymentIntent::create([
@@ -60,41 +82,50 @@ class SiteController extends Controller {
         ]);
     }
     // 
-    public function team() {
+    public function team()
+    {
         return view('front-end.team');
     }
     // 
-    public function instructor($uname) {
+    public function instructor($uname)
+    {
         $instructor = User::where([['role_id', 7], ['username', $uname]])->firstOrFail();
         return view('front-end.instructor', compact('instructor'));
     }
     // 
-    public function contact() {
+    public function contact()
+    {
         return view('front-end.contact');
     }
     // 
-    public function disclaimer() {
+    public function disclaimer()
+    {
         return view('front-end.disclaimer');
     }
     // 
-    public function privacy() {
+    public function privacy()
+    {
         return view('front-end.privacy');
     }
     // 
-    public function terms() {
+    public function terms()
+    {
         return view('front-end.terms');
     }
     // 
-    public function faq() {
+    public function faq()
+    {
         return view('front-end.faq');
     }
     // 
-    public function sitemap() {
+    public function sitemap()
+    {
         return view('front-end.sitemap');
     }
 
 
-    public function processPayment(Request $request) {
+    public function processPayment(Request $request)
+    {
         // dd($request);
         // Stripe::setApiKey(config('stripe.sk'));
 
@@ -174,7 +205,7 @@ class SiteController extends Controller {
         // dd($request->all());
         // Assuming the user is authenticated
         // $userId = auth()->user()->id;
-        
+
         // // Validate the request data and create the enrollment
         // $enroll = Enrollment::create([
         //     'user_id' => $userId,
@@ -188,11 +219,12 @@ class SiteController extends Controller {
             $payment = new Payment($request->all());
             $enroll->payment()->save($payment);
         }
-        
+
         return redirect()->route('site.home')->with('success', 'Purchased successfull!');
     }
 
-    public function success() {
+    public function success()
+    {
         return "Payment successful";
     }
 }

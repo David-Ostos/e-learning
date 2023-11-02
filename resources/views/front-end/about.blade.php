@@ -1,192 +1,170 @@
 <x-master-layout>
 
   <x-slot name="title">
-    {{ __('About Us') }}
+    {{ __('Sobre nosotros') }}
   </x-slot>
+  <!-- ======= Header ======= -->
 
-  <x-slot name="hero">
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <h1 class="display-3 text-white animated slideInDown">{{ __('About Us') }}</h1>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a class="text-white" href="{{ route('site.home') }}">{{ __('Home') }}</a></li>
-                <li class="breadcrumb-item"><a class="text-white" href="{{ route('site.sitemap') }}">{{ __('Pages') }}</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">{{ __('About') }}</li>
-              </ol>
-            </nav>
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Sobre nosotros</h2>
+        <p>Creemos que el aprendizaje es un proceso continuo, y que nunca se deja de aprender. Por eso, nuestros cursos están diseñados para ser flexibles y adaptables a las necesidades de cada estudiante. Puedes aprender a tu propio ritmo, y puedes acceder a nuestros cursos desde cualquier lugar del mundo. </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>4 cosas que hacen de Nemosina la mejor escuela online de educación tecnológica.</h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Una amplia gama de cursos.</li>
+              <li><i class="bi bi-check-circle"></i> Profesores expertos.</li>
+              <li><i class="bi bi-check-circle"></i> Materiales de alta calidad.</li>
+              <li><i class="bi bi-check-circle"></i> Un entorno de aprendizaje flexible.</li>
+            </ul>
+
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Header End -->
-  </x-slot>
 
-  <!-- About Start -->
-  <div class="container-xxl py-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-          <div class="position-relative h-100">
-            <img class="img-fluid position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}" alt="" style="object-fit: cover;" />
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-          <h6 class="section-title bg-white text-start text-primary pe-3">{{ __('About Us') }}</h6>
-          <h1 class="mb-4">{{ __('Welcome to ') . config('app.name') }}</h1>
-          <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-          <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-          <div class="row gy-2 gx-4 mb-4">
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>Online Classes</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>International Certificate</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>Online Classes</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="mb-0"><i class="fas fa-arrow-right text-primary me-2"></i>International Certificate</p>
-            </div>
-          </div>
-          <a class="btn btn-primary py-3 px-5 mt-2" href="javascript:void(0)">Read More</a>
-        </div>
       </div>
-    </div>
-  </div>
-  <!-- About End -->
+    </section><!-- End About Section -->
 
-  <!-- Mission Start -->
-  <div class="container-xxl py-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-          <h6 class="section-title bg-white text-start text-primary pe-3">{{ __('Mission') }}</h6>
-          <h2 class="mb-4">{{ __('Empowering through Education') }}</h2>
-          <p class="mb-4">At Learnopia, our mission is to revolutionize education by providing a dynamic and accessible learning platform that empowers individuals to unlock their full potential. We are committed to fostering a culture of continuous learning, where knowledge knows no bounds and is readily available to all. Through our diverse course offerings, expert instructors, and personalized learning pathways, we aim to equip learners with the skills and knowledge necessary to succeed in their personal and professional endeavors. Our mission is driven by a passion for education, a dedication to excellence, and a belief that learning has the power to transform lives and create a more enlightened and equitable society.</p>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-          <div class="position-relative h-100">
-            <img class="img-fluid position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}" alt="" style="object-fit: cover;" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Mission End -->
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg about-section-bg">
+      <div class="container">
 
-  <!-- Vision Start -->
-  <div class="container-xxl py-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-          <div class="position-relative h-100">
-            <img class="img-fluid position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}" alt="" style="object-fit: cover;" />
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-          <h6 class="section-title bg-white text-start text-primary pe-3">{{ __('Vision') }}</h6>
-          <h2 class="mb-4">{{ __('Empowering Growth, Everywhere') }}</h2>
-          <p class="mb-4">Our vision at Learnopia is to be a global leader in online education, inspiring and empowering learners to embrace lifelong learning. We envision a future where education is not confined by traditional barriers but is a gateway to personal growth and global progress. Learnopia strives to create a vibrant and inclusive community of learners, educators, and experts, collaborating to shape the future of education. Through innovative technology, data-driven insights, and a relentless pursuit of excellence, we aim to set new standards in the world of online learning. Our ultimate vision is to democratize education, making it accessible to learners of all ages and backgrounds, fostering a world where knowledge knows no boundaries, and every individual has the opportunity to thrive and make a positive impact on the world.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Vision End -->
+        <div class="row counters justify-content-between">
 
-  <!-- Team Start -->
-  <div class="container-xxl py-5">
-    <div class="container">
-      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-        <h1 class="mb-5">Expert Instructors</h1>
-      </div>
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="team-item bg-light">
-            <div class="overflow-hidden">
-              <img class="img-fluid" src="{{ asset('img/team-1.jpg') }}" alt="" />
-            </div>
-            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-              <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Estudiantes</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Cursos</p>
+          </div>
+
+<!--           <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Events</p>
+          </div> -->
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Profesores</p>
+          </div>
+
+        </div>
+
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+<!--     <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonios</h2>
+          <p>¿Que dicen?</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="text-center p-4">
-              <h5 class="mb-0">Instructor Name</h5>
-              <small>Designation</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="team-item bg-light">
-            <div class="overflow-hidden">
-              <img class="img-fluid" src="{{ asset('img/team-2.jpg') }}" alt="" />
-            </div>
-            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-              <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            </div><!-- End testimonial item --
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="text-center p-4">
-              <h5 class="mb-0">Instructor Name</h5>
-              <small>Designation</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="team-item bg-light">
-            <div class="overflow-hidden">
-              <img class="img-fluid" src="{{ asset('img/team-3.jpg') }}" alt="" />
-            </div>
-            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-              <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="text-center p-4">
-              <h5 class="mb-0">Instructor Name</h5>
-              <small>Designation</small>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-          <div class="team-item bg-light">
-            <div class="overflow-hidden">
-              <img class="img-fluid" src="{{ asset('img/team-4.jpg') }}" alt="" />
-            </div>
-            <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-              <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-sm-square btn-primary mx-1" href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="text-center p-4">
-              <h5 class="mb-0">Instructor Name</h5>
-              <small>Designation</small>
-            </div>
+            </div><!-- End testimonial item 
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item 
+
           </div>
+          <div class="swiper-pagination"></div>
         </div>
+
       </div>
-    </div>
-  </div>
-  <!-- Team End -->
+    </section><!-- End Testimonials Section 
+ -->
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
 </x-master-layout>

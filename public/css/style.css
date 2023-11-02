@@ -123,6 +123,9 @@ h6 {
   padding: 15px 0;
   box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
 }
+.page-header{
+  background-color: #5fcf80 !important;
+}
 
 #header .logo {
   font-size: 30px;

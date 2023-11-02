@@ -35,6 +35,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [SiteController::class, 'home'])->name('site.home');
 Route::get('/about', [SiteController::class, 'about'])->name('site.about');
+Route::get('/courses_details', [SiteController::class, 'courses_details'])->name('site.courses_details');
 Route::prefix('courses')->group(function() {
   Route::get('/', [SiteController::class, 'courses'])->name('site.courses');
   Route::get('/{slug}', [SiteController::class, 'display'])->name('course.display');
@@ -43,6 +44,8 @@ Route::prefix('courses')->group(function() {
 
 
 Route::get('/checkout', [SiteController::class, 'enrollment'])->name('enrollment');
+Route::get('/login', [SiteController::class, 'login'])->name('site.login2');
+Route::get('/register', [SiteController::class, 'register'])->name('register');
 Route::get('/team', [SiteController::class, 'team'])->name('site.team');
 Route::get('/team/{uname}', [SiteController::class, 'instructor'])->name('team.instructor');
 Route::get('/contact', [SiteController::class, 'contact'])->name('site.contact');

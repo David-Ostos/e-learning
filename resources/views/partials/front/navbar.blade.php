@@ -15,7 +15,8 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="javascript:void(0)" class="get-started-btn">{{ __('Registrate') }}</a>
+      <a href="{{ route('register') }}" class="get-started-btn">{{ __('Registrate') }}</a>
+      <a href="{{ route('login') }}" class="get-init-btn">{{ __('Inicia') }}</a>
 
     </div>
   </header><!-- End Header -->
